@@ -1,0 +1,72 @@
+body {
+    background: #000 url(http://images.cnblogs.com/cnblogs_com/shizq/550305/o_bg2.jpg)no-repeat top center;
+    background-image:url(http://images.cnblogs.com/cnblogs_com/shizq/550305/o_bg_top.png),url(http://images.cnblogs.com/cnblogs_com/shizq/550305/o_bg2.jpg);
+    font-family:"Microsoft YaHei";
+    font-size:14px;
+}
+
+#navigator{margin-top:92px;}
+
+#blogTitle{
+    height:50px;
+}
+#blogTitle h2 {
+    margin-left: 1.5em;
+    margin-top:1em;
+}
+
+#main{
+/*box-shadow:0px 0px 10px #999;*/
+}
+
+#navList li a{ /* 导航菜单*/
+padding-right:20px
+}
+
+.desc_img{     /* 首页摘要图片 */
+   float:none;
+   width:624px;
+}
+
+/* 首页摘要盒子边框 */
+.brief{width:618px; overflow:hidden;margin:6px 0;display:block;}
+.brief:hover{
+   border:1px solid #999 !important;
+}
+
+#ad_under_post_holder{  /* 评论下面的无用链接  */
+   display:none;
+}
+
+.postTitle{ /* 首页文章标题 */
+   font-size:16px;
+}
+
+#topics .postTitle { /* 内页文章标题 */ 
+    margin-top:24px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom:20px;
+    padding-left:20px;
+}
+
+#profile_block {  /* 公告栏内容隐藏（园龄、粉丝、关注、闪存）*/
+   display:none;
+}
+
+#author_profile{ /* 隐藏文章下面的个人信息*/
+   display:none;
+}
+
+
+.ad_text_commentbox, #site_nav_under { /* 隐藏评论下面的链接 */
+   display:none;
+}
+
+#green_channel{ /* 隐藏绿色通道 */
+   display:none
+}
+
+#cnblogs_post_body, #cnblogs_post_body p{
+   font-size:16px;
+   line-height: 1.8;
+}

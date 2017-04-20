@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)http://www.cnblogs.com/shizq/p/5611171.html -->
+<html lang="zh-cn"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript" src="./H5+JS实现手机摇一摇功能 - Kelly.Shi - 博客园_files/encoder.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>H5+JS实现手机摇一摇功能 - Kelly.Shi - 博客园</title>
+<link type="text/css" rel="stylesheet" href="./H5+JS实现手机摇一摇功能 - Kelly.Shi - 博客园_files/blog-common.css">
+<link id="MainCss" type="text/css" rel="stylesheet" href="./H5+JS实现手机摇一摇功能 - Kelly.Shi - 博客园_files/bundle-BlackLowKey.css">
+<link type="text/css" rel="stylesheet" href="./H5+JS实现手机摇一摇功能 - Kelly.Shi - 博客园_files/175085.css">
+<link id="mobile-style" media="only screen and (max-width: 768px)" type="text/css" rel="stylesheet" href="./H5+JS实现手机摇一摇功能 - Kelly.Shi - 博客园_files/bundle-BlackLowKey-mobile.css">
+<link title="RSS" type="application/rss+xml" rel="alternate" href="http://www.cnblogs.com/shizq/rss">
+<link title="RSD" type="application/rsd+xml" rel="EditURI" href="http://www.cnblogs.com/shizq/rsd.xml">
+<link type="application/wlwmanifest+xml" rel="wlwmanifest" href="http://www.cnblogs.com/shizq/wlwmanifest.xml">
+<script src="./H5+JS实现手机摇一摇功能 - Kelly.Shi - 博客园_files/jquery.js" type="text/javascript"></script>  
+<script type="text/javascript">var currentBlogApp = 'shizq', cb_enable_mathjax=false;var isLogined=false;</script>
+<script src="./H5+JS实现手机摇一摇功能 - Kelly.Shi - 博客园_files/blog-common.js" type="text/javascript"></script>
+<style type="text/css">
+.c_ad_block,[id^="div-gpt-ad-"],#ibanner��#banner_right,[id^="ad_b"],#banner_right {display:none!important;display:none}[id="bb9c190068b8405587e5006f905e790c"]{display:none;position:absolute;top:-1000000px;visibility:hidden}</style>
+<script language="javascript" type="text/javascript" src="./H5+JS实现手机摇一摇功能 - Kelly.Shi - 博客园_files/35ff706fd57d11c141cdefcd58d6562b.js" charset="gb2312"></script><script type="text/javascript">
+hQGHuMEAyLn('[id="bb9c190068b8405587e5006f905e790c"]');</script><style type="text/css">div[id^="div-gpt-ad-"],.adsbygoogle{display:none!important;}</style><style type="text/css">.f30b699fe-8a1e-4d4b-b1b8-5a443e27b9ac5092 { width:270px;height:250px; margin:60px 0 10px 0;overflow:hidden;z-index:999999999;}</style></head>
+<body>
+<a name="top"></a>
+
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+	<a id="lnkBlogLogo" href="http://www.cnblogs.com/shizq/"><img id="blogLogo" src="./H5+JS实现手机摇一摇功能 - Kelly.Shi - 博客园_files/logo.gif" alt="返回主页"></a>			
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle" href="http://www.cnblogs.com/shizq/">Kelly's Blog</a></h1>
+<h2>Front-end Developer / UI Designer<br>
+前端开发、UI设计、用户体验</h2>
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li></li>
+<li><a id="blog_nav_myhome" class="menu" href="http://www.cnblogs.com/shizq/">首页</a></li>
+<li style="display: none;"><a id="blog_nav_newpost" class="menu" rel="nofollow" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">新随笔</a></li>
+<li style="display: none;"><a id="blog_nav_contact" class="menu" rel="nofollow" href="https://msg.cnblogs.com/send/Kelly.Shi">联系</a></li>
+<li>
+<!----></li>
+<li style="display: none;"><a id="blog_nav_admin" class="menu" rel="nofollow" href="https://i.cnblogs.com/">管理</a></li>
+<li><a href="http://www.cnblogs.com/shizq/category/550291.html">项目案例 /Portfolio</a></li><li><a href="http://www.cnblogs.com/shizq/articles/3534597.html">关于我 /About me</a></li></ul>
+		<div class="blogStats">
+			
+			<div id="blog_stats">
+<span id="stats_post_count">随笔 - 19&nbsp; </span>
+<span id="stats_article_count">文章 - 5&nbsp; </span>
+<span id="stats-comment_count">评论 - 1</span>
+</div>
+			
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		
+<div id="post_detail">
+<!--done-->
+<div id="topics">
+	<div class="post">
+		<h1 class="postTitle">
+			<a id="cb_post_title_url" class="postTitle2" href="http://www.cnblogs.com/shizq/p/shake.html">H5+JS实现手机摇一摇功能</a>
+		</h1>
+		<div class="clear"></div>
+		<div class="postBody">
+			<div id="cnblogs_post_body"><p>在做微信活动页面的时候，经常会需要实现手机摇一摇功能，比如“摇一摇，拿好礼”。</p>
+<p><img src="./H5+JS实现手机摇一摇功能 - Kelly.Shi - 博客园_files/595688-20160623161058828-682029629.png" alt=""></p>
+<p><span style="line-height: 1.5;">为了实现它，就需要用到HTML5的DeviceOrientation特性</span>。它提供的DeviceMotion事件封装了设备的运动传感器时间，通过改时间可以获取设备的运动状态、加速度等数据（另还有deviceOrientation事件提供了设备角度、朝向等信息）。</p>
+<p>而通过DeviceMotion对设备运动状态的判断，则可以帮助我们在网页上就实现“摇一摇”的交互效果。</p>
+<p>现在把完整代码记录下：</p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./H5+JS实现手机摇一摇功能 - Kelly.Shi - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: #008080;"> 1</span> <span style="color: #008000;">//</span><span style="color: #008000;">运动事件监听</span>
+<span style="color: #008080;"> 2</span> <span style="color: #0000ff;">if</span><span style="color: #000000;"> (window.DeviceMotionEvent) {
+</span><span style="color: #008080;"> 3</span>     window.addEventListener('devicemotion',deviceMotionHandler,<span style="color: #0000ff;">false</span><span style="color: #000000;">);
+</span><span style="color: #008080;"> 4</span> <span style="color: #000000;">}
+</span><span style="color: #008080;"> 5</span> 
+<span style="color: #008080;"> 6</span> <span style="color: #008000;">//</span><span style="color: #008000;">获取加速度信息</span>
+<span style="color: #008080;"> 7</span> <span style="color: #008000;">//</span><span style="color: #008000;">通过监听上一步获取到的x, y, z 值在一定时间范围内的变化率，进行设备是否有进行晃动的判断。</span>
+<span style="color: #008080;"> 8</span> <span style="color: #008000;">//</span><span style="color: #008000;">而为了防止正常移动的误判，需要给该变化率设置一个合适的临界值。</span>
+<span style="color: #008080;"> 9</span> <span style="color: #0000ff;">var</span> SHAKE_THRESHOLD = 4000<span style="color: #000000;">;
+</span><span style="color: #008080;">10</span> <span style="color: #0000ff;">var</span> last_update = 0<span style="color: #000000;">;
+</span><span style="color: #008080;">11</span> <span style="color: #0000ff;">var</span> x, y, z, last_x = 0, last_y = 0, last_z = 0<span style="color: #000000;">;
+</span><span style="color: #008080;">12</span> <span style="color: #0000ff;">function</span><span style="color: #000000;"> deviceMotionHandler(eventData) {
+</span><span style="color: #008080;">13</span>         <span style="color: #0000ff;">var</span> acceleration =<span style="color: #000000;">eventData.accelerationIncludingGravity;
+</span><span style="color: #008080;">14</span>         <span style="color: #0000ff;">var</span> curTime = <span style="color: #0000ff;">new</span><span style="color: #000000;"> Date().getTime();
+</span><span style="color: #008080;">15</span>         <span style="color: #0000ff;">if</span> ((curTime-last_update)&gt; 10<span style="color: #000000;">) {
+</span><span style="color: #008080;">16</span>             <span style="color: #0000ff;">var</span> diffTime = curTime -<span style="color: #000000;">last_update;
+</span><span style="color: #008080;">17</span>             last_update =<span style="color: #000000;"> curTime;
+</span><span style="color: #008080;">18</span>             x =<span style="color: #000000;"> acceleration.x;
+</span><span style="color: #008080;">19</span>             y =<span style="color: #000000;"> acceleration.y;
+</span><span style="color: #008080;">20</span>             z =<span style="color: #000000;"> acceleration.z;
+</span><span style="color: #008080;">21</span>             <span style="color: #0000ff;">var</span> speed = Math.abs(x +y + z - last_x - last_y - last_z) / diffTime * 10000<span style="color: #000000;">;
+</span><span style="color: #008080;">22</span>             <span style="color: #0000ff;">if</span> (speed &gt;<span style="color: #000000;"> SHAKE_THRESHOLD) {
+</span><span style="color: #008080;">23</span>                 alert("你中奖啦！");  <span style="color: #008000;">//</span><span style="color: #008000;"> Do something</span>
+<span style="color: #008080;">24</span> <span style="color: #000000;">            }
+</span><span style="color: #008080;">25</span>             last_x =<span style="color: #000000;"> x;
+</span><span style="color: #008080;">26</span>             last_y =<span style="color: #000000;"> y;
+</span><span style="color: #008080;">27</span>             last_z =<span style="color: #000000;"> z;
+</span><span style="color: #008080;">28</span> <span style="color: #000000;">        }
+</span><span style="color: #008080;">29</span> }</pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./H5+JS实现手机摇一摇功能 - Kelly.Shi - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p>&nbsp;这样摇一摇代码就已经实现啦～～～</p></div><div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+<div id="BlogPostCategory">分类: <a href="http://www.cnblogs.com/shizq/category/550572.html" target="_blank">5. 前端技术</a></div>
+<div id="EntryTag"></div>
+<div id="blog_post_info"><div id="green_channel">
+        <a href="javascript:void(0);" id="green_channel_digg" onclick="DiggIt(5611171,cb_blogId,1);green_channel_success(this,&#39;谢谢推荐！&#39;);">好文要顶</a>
+            <a id="green_channel_follow" onclick="follow(&#39;69af9645-3171-e311-8d02-90b11c0b17d6&#39;);" href="javascript:void(0);">关注我</a>
+    <a id="green_channel_favorite" onclick="AddToWz(cb_entryId);return false;" href="javascript:void(0);">收藏该文</a>
+    <a id="green_channel_weibo" href="javascript:void(0);" title="分享至新浪微博" onclick="ShareToTsina()"><img src="./H5+JS实现手机摇一摇功能 - Kelly.Shi - 博客园_files/icon_weibo_24.png" alt=""></a>
+    <a id="green_channel_wechat" href="javascript:void(0);" title="分享至微信" onclick="shareOnWechat()"><img src="./H5+JS实现手机摇一摇功能 - Kelly.Shi - 博客园_files/wechat.png" alt=""></a>
+</div>
+<div id="author_profile">
+    <div id="author_profile_info" class="author_profile_info">
+            <a href="http://home.cnblogs.com/u/shizq/" target="_blank"><img src="./H5+JS实现手机摇一摇功能 - Kelly.Shi - 博客园_files/20140126134749.png" class="author_avatar" alt=""></a>
+        <div id="author_profile_detail" class="author_profile_info">
+            <a href="http://home.cnblogs.com/u/shizq/">Kelly.Shi</a><br>
+            <a href="http://home.cnblogs.com/u/shizq/followees">关注 - 0</a><br>
+            <a href="http://home.cnblogs.com/u/shizq/followers">粉丝 - 1</a>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="author_profile_honor"></div>
+    <div id="author_profile_follow">
+                <a href="javascript:void(0);" onclick="follow(&#39;69af9645-3171-e311-8d02-90b11c0b17d6&#39;);return false;">+加关注</a>
+    </div>
+</div>
+<div id="div_digg">
+    <div class="diggit" onclick="votePost(5611171,&#39;Digg&#39;)">
+        <span class="diggnum" id="digg_count">1</span>
+    </div>
+    <div class="buryit" onclick="votePost(5611171,&#39;Bury&#39;)">
+        <span class="burynum" id="bury_count">0</span>
+    </div>
+    <div class="clear"></div>
+    <div class="diggword" id="digg_tips">
+    </div>
+</div>
+</div>
+<div class="clear"></div>
+<div id="post_next_prev"><a href="http://www.cnblogs.com/shizq/p/5250604.html" class="p_n_p_prefix">« </a> 上一篇：<a href="http://www.cnblogs.com/shizq/p/5250604.html" title="发布于2016-03-07 14:58">手机访问PC网站自动跳转到手机网站代码</a><br><a href="http://www.cnblogs.com/shizq/p/5629027.html" class="p_n_p_prefix">» </a> 下一篇：<a href="http://www.cnblogs.com/shizq/p/5629027.html" title="发布于2016-06-30 10:04">微信H5页面 - 调酒</a><br></div>
+</div>
+
+
+		</div>
+		<div class="postDesc">posted @ <span id="post-date">2016-06-23 16:03</span> <a href="http://www.cnblogs.com/shizq/">Kelly.Shi</a> 阅读(<span id="post_view_count">3113</span>) 评论(<span id="post_comment_count">0</span>)  <a href="https://i.cnblogs.com/EditPosts.aspx?postid=5611171" rel="nofollow">编辑</a> <a href="http://www.cnblogs.com/shizq/p/5611171.html#" onclick="AddToWz(5611171);return false;">收藏</a></div>
+	</div>
+	<script type="text/javascript">var allowComments=true,cb_blogId=175085,cb_entryId=5611171,cb_blogApp=currentBlogApp,cb_blogUserGuid='69af9645-3171-e311-8d02-90b11c0b17d6',cb_entryCreatedDate='2016/6/23 16:03:00';loadViewCount(cb_entryId);</script>
+	
+</div><!--end: topics 文章、评论容器-->
+</div><a name="!comments"></a><div id="blog-comments-placeholder"></div><script type="text/javascript">var commentManager = new blogCommentManager();commentManager.renderComments(0);</script>
+<div id="comment_form" class="commentform">
+<a name="commentform"></a>
+<div id="divCommentShow"></div>
+<div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="http://www.cnblogs.com/shizq/p/5611171.html#" onclick="return RefreshPage();">刷新页面</a><a href="http://www.cnblogs.com/shizq/p/5611171.html#top">返回顶部</a></div>
+<div id="comment_form_container"><div class="login_tips">注册用户登录后才能发表评论，请 <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return login(&#39;commentform&#39;);">登录</a> 或 <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return register();">注册</a>，<a href="http://www.cnblogs.com/">访问</a>网站首页。</div></div>
+<div class="ad_text_commentbox" id="ad_text_under_commentbox" style="display: none;"></div>
+<div id="ad_t2"><a href="http://www.ucancode.com/index.htm" target="_blank">【推荐】50万行VC++源码: 大型组态工控、电力仿真CAD与GIS源码库</a><br><a href="https://group.cnblogs.com/topic/76017.html" target="_blank">【活动】一元专享1500元微软智能云Azure</a><br></div>
+<div id="opt_under_post"></div>
+<div id="ad_c1" class="c_ad_block">     <ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-4210569241504288" data-ad-slot="5457903683"></ins></div>
+<div id="under_post_news" style="display: none;"><div class="itnews c_ad_block"><b>最新IT新闻</b>:<br> ·  <a href="http://news.cnblogs.com/n/562465/" target="_blank">【对话首席架构师】 | 上海 · 杭州架构师大会 （第1期）</a><br> ·  <a href="http://news.cnblogs.com/n/562429/" target="_blank">微软开源生物模型分析器（BMA）：一款基于云的生物研究工具</a><br> ·  <a href="http://news.cnblogs.com/n/562449/" target="_blank">BAT员工跳槽有什么规律？一图告诉你明星互联网公司的人都去哪儿了</a><br> ·  <a href="http://news.cnblogs.com/n/562464/" target="_blank">业内大佬怒喷Window 10 Cloud：最大的流氓软件！</a><br> ·  <a href="http://news.cnblogs.com/n/562463/" target="_blank">成本压力太大 小米电视也涨价了</a><br>» <a href="http://news.cnblogs.com/" title="IT新闻" target="_blank">更多新闻...</a></div></div>
+<div id="ad_c2" class="c_ad_block"><a href="http://bbs.h3bpm.com/index.php?m=app&app=product_download&a=reg&utm_source=csdn&utm_medium=pic&utm_campaign=show&utm_content=v10&utm_term=%E5%85%8D%E8%B4%B9%E4%B8%8B%E8%BD%BD" target="_blank"><img width="468" height="60" src="./H5+JS实现手机摇一摇功能 - Kelly.Shi - 博客园_files/24442-20170118152220281-363324784.jpg" alt=""></a></div>
+<div id="under_post_kb" style="display: none;"><div class="itnews c_ad_block" id="kb_block"><b>最新知识库文章</b>:<br><div id="kb_recent"> ·  <a href="http://kb.cnblogs.com/page/554260/" target="_blank">「代码家」的学习过程和学习经验分享</a><br> ·  <a href="http://kb.cnblogs.com/page/556770/" target="_blank">写给未来的程序媛</a><br> ·  <a href="http://kb.cnblogs.com/page/558087/" target="_blank">高质量的工程代码为什么难写</a><br> ·  <a href="http://kb.cnblogs.com/page/555750/" target="_blank">循序渐进地代码重构</a><br> ·  <a href="http://kb.cnblogs.com/page/554496/" target="_blank">技术的正宗与野路子</a><br></div>» <a href="http://kb.cnblogs.com/" target="_blank">更多知识库文章...</a></div></div>
+<div id="HistoryToday" class="c_ad_block"></div>
+<script type="text/javascript">
+    fixPostBody();
+    setTimeout(function () { incrementViewCount(cb_entryId); }, 50);
+    deliverAdT2();
+    deliverAdC1();
+    deliverAdC2();    
+    loadNewsAndKb();
+    loadBlogSignature();
+    LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+    GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate);
+    loadOptUnderPost();
+    GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);   
+</script>
+</div>
+
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div class="f30b699fe-8a1e-4d4b-b1b8-5a443e27b9ac5092"><iframe frameborder="0" scrolling="no" src="./H5+JS实现手机摇一摇功能 - Kelly.Shi - 博客园_files/1.html" style="width: 299px; height: 249px; border: none; background-color: transparent;"></iframe></div><div id="sideBarMain">
+			
+<!--done-->
+<div class="newsItem">
+<h3 class="catListTitle">公告</h3>
+	<div id="blog-news"><p style="text-align:center">
+<a href="http://www.cnblogs.com/shizq/articles/3534597.html"><img src="./H5+JS实现手机摇一摇功能 - Kelly.Shi - 博客园_files/o_me_color.png" border="0" width="120">  <br></a>
+<!-- <img src="http://images.cnblogs.com/cnblogs_com/shizq/550305/o_ui.jpg" border="0" />  <br />-->
+<b><a href="http://www.cnblogs.com/shizq/articles/3534597.html">Kelly</a></b> </p>
+
+<p style="margin-top:10px">
+Front-end Developer / UI Designer<br>
+前端开发、UI设计、用户体验<br>
+</p><div id="profile_block">昵称：<a href="http://home.cnblogs.com/u/shizq/">Kelly.Shi</a><br>园龄：<a href="http://home.cnblogs.com/u/shizq/" title="入园时间：2013-12-30">3年1个月</a><br>粉丝：<a href="http://home.cnblogs.com/u/shizq/followers/">1</a><br>关注：<a href="http://home.cnblogs.com/u/shizq/followees/">0</a><div id="p_b_follow"><a href="javascript:void(0);" onclick="follow(&#39;69af9645-3171-e311-8d02-90b11c0b17d6&#39;)">+加关注</a></div></div></div><script type="text/javascript">loadBlogNews();</script>
+</div>
+
+			<div id="blog-calendar" style="display:none"></div><script type="text/javascript">loadBlogDefaultCalendar();</script>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"><div id="sidebar_search" class="sidebar-block"></div><div id="sidebar_categories">
+<div id="sidebar_postcategory" class="catListPostCategory sidebar-block">
+<h3 class="catListTitle">随笔分类<span style="font-size:11px;font-weight:normal">(22)</span></h3>
+
+<ul>
+
+<li><a id="CatList_LinkList_0_Link_0" href="http://www.cnblogs.com/shizq/category/550291.html">1. 项目案例(5)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_1" href="http://www.cnblogs.com/shizq/category/550292.html">2. 用户研究</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_2" href="http://www.cnblogs.com/shizq/category/550293.html">3. 视觉设计(7)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_3" href="http://www.cnblogs.com/shizq/category/550570.html">4. 交互设计</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_4" href="http://www.cnblogs.com/shizq/category/550572.html">5. 前端技术(8)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_5" href="http://www.cnblogs.com/shizq/category/626733.html">6. 吉他(2)</a> </li>
+
+</ul>
+
+</div>
+
+<div id="sidebar_postarchive" class="catListPostArchive sidebar-block">
+<h3 class="catListTitle">随笔档案<span style="font-size:11px;font-weight:normal">(19)</span></h3>
+
+<ul>
+
+<li><a id="CatList_LinkList_1_Link_0" href="http://www.cnblogs.com/shizq/archive/2016/07.html">2016年7月 (2)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_1" href="http://www.cnblogs.com/shizq/archive/2016/06.html">2016年6月 (2)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_2" href="http://www.cnblogs.com/shizq/archive/2016/03.html">2016年3月 (1)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_3" href="http://www.cnblogs.com/shizq/archive/2016/02.html">2016年2月 (1)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_4" href="http://www.cnblogs.com/shizq/archive/2015/12.html">2015年12月 (2)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_5" href="http://www.cnblogs.com/shizq/archive/2015/11.html">2015年11月 (1)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_6" href="http://www.cnblogs.com/shizq/archive/2015/05.html">2015年5月 (1)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_7" href="http://www.cnblogs.com/shizq/archive/2014/11.html">2014年11月 (3)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_8" href="http://www.cnblogs.com/shizq/archive/2014/08.html">2014年8月 (1)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_9" href="http://www.cnblogs.com/shizq/archive/2014/06.html">2014年6月 (1)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_10" href="http://www.cnblogs.com/shizq/archive/2014/02.html">2014年2月 (2)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_11" href="http://www.cnblogs.com/shizq/archive/2014/01.html">2014年1月 (2)</a> </li>
+
+</ul>
+
+</div>
+
+<div id="sidebar_links550302" class="catList sidebar-block">
+<h3 class="catListTitle">管理入口</h3>
+
+<ul>
+
+<li><a id="CatList_LinkList_2_Link_0" href="http://www.cnblogs.com/shizq/admin/EditPosts.aspx" rel="nofollow" target="_blank">管理</a> </li>
+
+</ul>
+
+</div>
+
+</div><div id="sidebar_topviewedposts" class="sidebar-block"><div id="topview_posts_wrap">
+<div class="catListView">
+<h3 class="catListTitle">阅读排行榜</h3>
+	<div id="TopViewPostsBlock"><ul><li><a href="http://www.cnblogs.com/shizq/p/shake.html">1. H5+JS实现手机摇一摇功能(3114)</a></li><li><a href="http://www.cnblogs.com/shizq/p/5658539.html">2. H5页面背景音乐，C33 360°旋转效果(1017)</a></li><li><a href="http://www.cnblogs.com/shizq/p/5066321.html">3. HTML5来了，7个混合式移动开发框架(340)</a></li><li><a href="http://www.cnblogs.com/shizq/p/5063610.html">4. CSS3 动画 @keyframes(155)</a></li><li><a href="http://www.cnblogs.com/shizq/p/3895543.html">5. 云盘设计（包括 客户端版、网页版、手机版）(141)</a></li></ul></div>
+</div>
+</div></div></div><script type="text/javascript">loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		
+<!--done-->
+Copyright ©2017 Kelly.Shi
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+<!--PageEndHtml Block Begin-->
+<script type="text/javascript">
+$(function(){
+//隐藏导航菜单
+$("#navList li:contains('博问')").hide(); 
+$("#navList li:contains('闪存')").hide();
+$("#navList li:contains('新随笔')").hide();
+$("#navList li:contains('联系')").hide();
+$("#navList li:contains('管理')").hide();
+//添加导航菜单
+$("#navList").append("<li><a href='http://www.cnblogs.com/shizq/category/550291.html'>项目案例 /Portfolio</a></li><li><a href='http://www.cnblogs.com/shizq/articles/3534597.html'>关于我 /About me</a></li>");
+$("#MyLinks1_MyHomeLink").append(" /Home")
+//隐藏文章下面的个人信息
+$("#author_profile").hide();
+
+//隐藏评论下面的链接
+$(".ad_text_commentbox").hide();
+$("#site_nav_under").hide();
+
+//隐藏文章下IT新闻
+$("#blog_news_kb").hide();
+//隐藏文章下IT新闻
+$("#under_post_news").hide();
+//隐藏文章下广告banner
+$("#google_ad_c2").hide();
+//隐藏文章下 最新知识库文章
+$("#under_post_kb").hide();
+
+//隐藏“作品案例”中随笔分类
+$(".entrylistTitle").hide();
+
+});
+
+</script>
+<!--PageEndHtml Block End-->
+
+
+<script type="text/javascript" src="./H5+JS实现手机摇一摇功能 - Kelly.Shi - 博客园_files/ssa.ashx" id="d997ed0e-d1a3-4bec"></script></body></html>

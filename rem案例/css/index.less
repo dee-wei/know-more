@@ -1,0 +1,211 @@
+
+// 引入基本的css
+@import 'base.less';
+
+// 引入字体图标
+@import 'font.less';
+
+@import 'mixins.less';
+
+.index-page {
+	padding-bottom: 3.75rem;
+
+	.items {
+		padding: 0 0.75rem;
+		// height: 10rem;
+
+		.box-sizing;
+		
+		// 标题
+		.title {
+			padding: 0.875rem 0;
+			overflow: hidden;
+
+			h3 {
+				line-height: 1;
+				font-size: 0.875rem;
+				font-weight: normal;
+				float: left;
+			}
+
+			span {
+				display: block;
+				float: right;
+				font-size: 0.875rem;
+				color: #888;
+			}
+		}
+		
+		// 券主体
+		.item {
+			// height: 10rem;
+			margin-bottom: 0.875rem;
+			position: relative;
+			background-image: url(../images/sale.png);
+			background-repeat: no-repeat;
+			background-position: 14rem -0.25rem;
+			background-size: 4.5625rem 4.5625rem;
+			overflow: hidden;
+
+			.border-radius(0.25rem);
+
+			&:not(.add) {
+				box-shadow: 0 0 0.5rem #CCC;
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		.body {
+			height: 7.25rem;
+			position: relative;
+		}
+
+		.extra {
+			width: 100%;
+			position: absolute;
+			bottom: 0.5rem;
+			line-height: 1.5;
+			padding: 0 0.75rem;
+			font-size: 0.6875rem;
+			color: #FFF;
+
+			.box-sizing;
+
+			p {
+				float: left;
+			}
+			
+			// 状态
+			.status {
+				float: right;
+				padding: 0 0.125rem;
+				background-color: rgba(0, 0, 0, 0.5);
+
+				.border-radius;
+			}
+		}
+		
+		// 全场优惠
+		.all {
+			background-color: #55bc75;
+			
+			// 状态
+			.status {
+				color: #bdf3ce;
+			}
+		}
+
+		.name {
+			line-height: 1;
+			padding-top: 1rem;
+			padding-left: 0.75rem;
+			font-size: 1.5rem;
+			color: #FFF;
+
+			p {
+				margin-top: 0.5rem;
+				font-size: 0.75rem;
+				color: #bdf3ce;
+			}
+		}
+
+		// 优惠券
+		.coupon {
+			background-color: #a974bc;
+
+			.status {
+				color: #f2d8fb;
+			}
+		}
+
+		.value {
+			font-size: 0;
+			padding: 0 0 0 0.75rem;
+			color: #FFF;
+			
+			.rmb {
+				font-size: 2.8125rem;
+			}
+
+			.cell {
+				font-size: 1.25rem;
+			}
+
+			.option {
+				font-size: 0.75rem;
+				color: #eac7f7;
+			}
+		}
+
+		// 操作
+		.action {
+			width: 100%;
+			height: 2.75rem;
+			padding-top: 0.25rem;
+			// background-color: #FFF;
+			background-image: url(../images/icon.png);
+			background-repeat: repeat-x;
+			// position: absolute;
+			// bottom: 0;
+
+			.box-sizing;
+
+			ul {
+				display: flex;
+				background-color: #FFF;
+			}
+
+			li {
+				height: 1.5rem;
+				flex: 1;
+				line-height: 1.5rem;
+				text-align: center;
+				padding: 0.5rem 0;
+				// background-color: blue;
+
+				&:last-child a {
+					border-right: 0 none;
+				}
+			}
+
+			a {
+				color: #888;
+				border-right: 1px solid #CCC;
+			}
+		}
+
+		// 添加按钮
+		.add {
+			height: 7rem;
+			padding: 1rem 0;
+			text-align: center;
+			border: 0.09375rem dashed #dedede;
+			background-color: #FFF;
+
+			.box-sizing;
+
+			i[class^=icon] {
+				font-size: 3.25rem;
+				color: #aeaeae;
+			}
+
+			a {
+				color: #aeaeae;
+				margin-top: 0.5rem;
+			}
+		}
+	}
+
+	// 用户提示
+	.tips {
+		line-height: 1.5;
+		padding: 0 0.75rem;
+		margin-top: 3.75rem;
+		font-size: 0.75rem;
+		color: #999;
+	}
+}
+
