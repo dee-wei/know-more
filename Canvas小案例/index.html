@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>$</title>
+    <style>
+        canvas {
+            margin: 100px auto;
+            margin-left: 600px;
+        }
+    </style>
+</head>
+<body>
+<canvas id="canvas" width="800" height="600" style="border:1px solid red"></canvas>
+</body>
+<script src="jquery-2.1.4.js"></script>
+<script>
+    var canvas = document.getElementById("canvas");
+    var ctx = canvas.getContext("2d");
+    var img  = new Image();
+    img.src = "./gameImgs/1.png";
+    img.onload = function (){
+        //i表示行 ，j表示列
+        var width = img.width/4;
+        var height = img.height/4;
+        var i = 0;
+        var j = 0;
+        var y1  = 10;
+        var x1 = 10;
+        var timer = setInterval(function () {
+                    ctx.clearRect(0, 0, canvas.width, canvas.height);
+                    var x = j * width;
+                    var y = i * height;
+                    j++;
+                    if (j == 4) {
+                        j = 0;
+                    }
+                    ctx.drawImage(img, x, y, width, height, 10, y1 += 5, width, height);
+                    //边境检测 此时向右走
+                    if (y1 >= (canvas.height - height)) {
+                        clearInterval(timer);
+                        var timer1 = setInterval(function () {
+                            ctx.clearRect(0, 0, canvas.width, canvas.height);
+                            var x = j * width;
+                            var y = 2 * height;
+                            j++;
+                            if (j == 4) {
+                                j = 0;
+                            }
+                            ctx.drawImage(img, x, y, width, height, x1 += 5, y1, width, height);
+                            //边境检测，此时向左走
+                            if (x1 > (canvas.width - width)) {
+                                clearInterval(timer1);
+                                var timer2 = setInterval(function () {
+                                    ctx.clearRect(0, 0, canvas.width, canvas.height);
+                                    var x = j * width;
+                                    var y = 3 * height;
+                                    j++;
+                                    if (j == 4) {
+                                        j = 0;
+                                    }
+                                    ctx.drawImage(img, x, y, width, height, x1, y1 -= 5, width, height);
+                                    //边境检测，此时向左走
+                                    if (y1 <= 0) {
+                                        clearInterval(timer2);
+                                        var timer3 = setInterval(function () {
+                                            ctx.clearRect(0, 0, canvas.width, canvas.height);
+                                            var x = j * width;
+                                            var y = height;
+                                            j++;
+                                            if (j == 4) {
+                                                j = 0;
+                                            }
+                                            ctx.drawImage(img, x, y, width, height, x1 -= 5, y1, width, height);
+                                            if (x1 <= 0) {
+                                                clearInterval(timer3);
+                                            }
+                                        }, 100);
+                                    }
+                                }, 100);
+                            }
+                        }, 100);
+                    }
+            },100);
+    }
+</script>
+</html>
